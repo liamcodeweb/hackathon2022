@@ -5,10 +5,10 @@ export function Footer({ children, previous, next }) {
   return (
     <footer className={clsx('text-sm leading-6', previous || next ? 'mt-12' : 'mt-16')}>
       {(previous || next) && (
-        <div className="mb-10 text-slate-700 font-semibold flex items-center dark:text-slate-200">
+        <div className="flex items-center mb-10 font-semibold text-slate-700 dark:text-slate-200">
           {previous && (
             <Link href={previous.href}>
-              <a className="group flex items-center hover:text-slate-900 dark:hover:text-white">
+              <a className="flex items-center group hover:text-slate-900 dark:hover:text-white">
                 <svg
                   viewBox="0 0 3 6"
                   className="mr-3 w-auto h-1.5 text-slate-400 overflow-visible group-hover:text-slate-600 dark:group-hover:text-slate-300"
@@ -28,7 +28,7 @@ export function Footer({ children, previous, next }) {
           )}
           {next && (
             <Link href={next.href}>
-              <a className="group ml-auto flex items-center hover:text-slate-900 dark:hover:text-white">
+              <a className="flex items-center ml-auto group hover:text-slate-900 dark:hover:text-white">
                 {next.shortTitle || next.title}
                 <svg
                   viewBox="0 0 3 6"
@@ -48,9 +48,9 @@ export function Footer({ children, previous, next }) {
           )}
         </div>
       )}
-      <div className="pt-10 pb-28 border-t border-slate-200 sm:flex justify-between text-slate-500 dark:border-slate-200/5">
+      <div className="justify-between pt-10 border-t pb-28 border-slate-200 sm:flex text-slate-500 dark:border-slate-200/5">
         <div className="mb-6 sm:mb-0 sm:flex">
-          <p>Copyright &copy; {new Date().getFullYear()} GAMMA.</p>
+          <p>Copyright &copy; {new Date().getFullYear()} AIviCare.</p>
         </div>
         {children ? (
           children

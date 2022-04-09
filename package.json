@@ -1,12 +1,14 @@
 {
   "private": true,
   "scripts": {
+    "clean":"rimraf -f ./build ./out",
     "dev": "next dev",
     "build": "next build",
     "postbuild": "if [ -f './.next/serverless/scripts/build-rss.js' ]; then node ./.next/serverless/scripts/build-rss.js; else node ./.next/server/scripts/build-rss.js; fi",
     "start": "next start",
-    "export": "next build && next export",
-    "format": "prettier '{src,remark,scripts}/**/*.{css,js,mdx}' --write"
+    "export": "next build && next export -o dist",
+    "format": "prettier '{src,remark,scripts}/**/*.{css,js,mdx}' --write",
+    "deploy": "gcloud app deploy"
   },
   "browserslist": [
     "> 1%"
@@ -55,6 +57,7 @@
     "react-dom": "^17.0.2",
     "react-intersection-observer": "^8.29.0",
     "redent": "^3.0.0",
+    "rimraf": "^2.6.3",
     "seedrandom": "^3.0.5",
     "simple-functional-loader": "^1.2.1",
     "stringify-object": "^3.3.0",

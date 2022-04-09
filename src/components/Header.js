@@ -123,18 +123,30 @@ export function NavItems() {
     <>
       <li>
         <Link href="/docs/installation">
-          <a className="hover:text-sky-500 dark:hover:text-sky-400">Ngữ pháp</a>
+          <a className="hover:text-sky-500 dark:hover:text-sky-400">Bệnh viện</a>
         </Link>
       </li>
       <li>
         <Link href="/exams">
-          <a className="hover:text-sky-500 dark:hover:text-sky-400">Ôn luyện</a>
+          <a className="hover:text-sky-500 dark:hover:text-sky-400">Chuyên Khoa</a>
         </Link>
       </li>
 
       <li>
         <Link href="/blog">
-          <a className="hover:text-sky-500 dark:hover:text-sky-400">Tin tức</a>
+          <a className="hover:text-sky-500 dark:hover:text-sky-400">Bác sĩ</a>
+        </Link>
+      </li>
+
+      <li>
+        <Link href="/blog">
+          <a className="hover:text-sky-500 dark:hover:text-sky-400">Gói dịch vụ</a>
+        </Link>
+      </li>
+
+      <li>
+        <Link href="/blog">
+          <a className="hover:text-sky-500 dark:hover:text-sky-400">Tư vấn, hỏi đáp</a>
         </Link>
       </li>
     </>

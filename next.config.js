@@ -38,6 +38,7 @@ const fallbackGetStaticProps = {
 module.exports = withBundleAnalyzer({
   swcMinify: true,
   pageExtensions: ['js', 'jsx', 'mdx'],
+  distDir: 'build',
   images: {
     disableStaticImages: true,
   },
